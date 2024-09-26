@@ -55,47 +55,9 @@ The app is built using a modular and component-driven architecture. Key concepts
 3. **Pages**: Top-level components representing different views (such as Dashboard, Booking Page, etc.).
 4. **Styled Components**: The UI is styled using Styled Components, which allows writing CSS directly in JavaScript files.
 
-## 5. Folder Structure
+## 7. Important Modules and Components
 
-```
-/public
-├── assets
-└── favicon.ico
-
-/src
-├── components
-│   ├── Header.jsx
-│   ├── Sidebar.jsx
-│   ├── Footer.jsx
-│   └── BookingForm.jsx
-├── hooks
-│   ├── useBookingData.js
-│   └── useAuth.js
-├── pages
-│   ├── Dashboard.jsx
-│   ├── Bookings.jsx
-│   ├── Financials.jsx
-│   └── Login.jsx
-├── services
-│   └── supabaseClient.js
-├── App.jsx
-└── main.jsx
-
-/vite.config.js
-/package.json
-/README.md
-```
-
-### Key Folders:
-
-- **components**: Contains all reusable UI components, such as `Header`, `Sidebar`, and `BookingForm`.
-- **hooks**: Contains custom hooks for state management and data fetching, such as `useBookingData` and `useAuth`.
-- **pages**: Contains top-level components for each page of the application.
-- **services**: Contains files for interacting with external services like Supabase.
-
-## 6. Important Modules and Components
-
-### 6.1 Supabase Integration
+### 7.1 Supabase Integration
 
 The app uses Supabase for database and authentication. The `supabaseClient.js` file is responsible for setting up the client connection to Supabase.
 
@@ -107,7 +69,7 @@ const supabaseKey = 'public-anon-key';
 export const supabase = createClient(supabaseUrl, supabaseKey);
 ```
 
-### 6.2 React Query for Data Fetching
+### 7.2 React Query for Data Fetching
 
 The app uses React Query to fetch and manage server state for bookings, customers, and financial data. The `useBookingData` hook is an example of how data is fetched using React Query:
 
@@ -124,7 +86,7 @@ export function useBookingData() {
 }
 ```
 
-## 7. API Communication
+## 8. API Communication
 
 API communication is handled through Supabase, which acts as both the database and authentication service. The app sends HTTP requests to fetch, create, update, and delete data, which is done through React Query to ensure optimized data fetching and caching.
 
